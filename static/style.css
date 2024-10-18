@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    height: 100vh; /* Заповнює всю висоту вікна */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #34495e; /* Змінює фон при наведенні */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.alert {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.alert ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Зливаються кордони таблиці */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px; /* Відступи для комірок */
+    text-align: left; /* Вирівнювання тексту вліво */
+    border-bottom: 1px solid #ddd; /* Лінія під кожним рядком */
+}
+
+th {
+    background-color: #3498db; /* Колір фону заголовків */
+    color: white; /* Колір тексту заголовків */
+    font-weight: bold; /* Жирний текст для заголовків */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Зміна фону рядка при наведенні */
+}
+
+.manufacturer-form {
+    background-color: white; /* Білий фон для форми */
+    padding: 20px; /* Відступи для форми */
+    border-radius: 5px; /* Закруглені кути для форми */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для форми */
+    margin-top: 20px; /* Відстань зверху */
+}
+
+.manufacturer-form div {
+    margin-bottom: 15px; /* Відстань між елементами форми */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db; /* Колір фону кнопок */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Без підкреслення */
+    border-radius: 5px; /* Закруглення кутів */
+    transition: background-color 0.3s; /* Анімація зміни фону */
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Темніший колір при наведенні */
+}
+
+.button-container {
+    margin-bottom: 20px; /* Відстань між кнопкою та таблицею */
+}
+
+
+.manufacturer-form {
+    background-color: white; /* Білий фон для форми */
+    padding: 20px; /* Відступи для форми */
+    border-radius: 5px; /* Закруглені кути для форми */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для форми */
+    margin-top: 20px; /* Відстань зверху */
+    max-width: 500px; /* Максимальна ширина форми */
+    margin-left: auto; /* Центруємо по горизонталі */
+    margin-right: auto; /* Центруємо по горизонталі */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Відстань між елементами форми */
+}
+
+label {
+    display: block; /* Відображаємо мітку як блочний елемент */
+    margin-bottom: 5px; /* Відстань між міткою та полем вводу */
+    font-weight: bold; /* Жирний текст для міток */
+}
+
+.form-control {
+    width: 100%; /* Ширина полів вводу на всю ширину контейнера */
+    padding: 10px; /* Внутрішні відступи для полів вводу */
+    border: 1px solid #ccc; /* Колір кордону */
+    border-radius: 4px; /* Закруглення кутів */
+    box-sizing: border-box; /* Включає padding та border в загальну ширину */
+}
+
+.form-control:focus {
+    border-color: #3498db; /* Колір кордону при фокусі */
+    outline: none; /* Прибираємо контур при фокусі */
+}
+
+.btn {
+    background-color: #3498db; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    padding: 10px 15px; /* Внутрішні відступи для кнопки */
+    border: none; /* Без кордону */
+    border-radius: 4px; /* Закруглення кутів кнопки */
+    cursor: pointer; /* Курсор у вигляді руки */
+    transition: background-color 0.3s; /* Анімація зміни фону */
+    width: 100%; /* Ширина кнопки на всю ширину контейнера */
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Темніший колір кнопки при наведенні */
+}

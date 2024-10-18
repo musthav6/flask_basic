@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Brands</h1>
+
+<!-- Таблиця для відображення всіх брендів -->
+<table class="table">
+    <thead>
+    <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Internal ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for brand in brands %}
+    <tr>
+        <td><img src="{{ brand.logo }}" alt="{{ brand.name }}" width="50" height="50"></td>
+        <td>{{ brand.name }}</td>
+        <td>{{ brand.description }}</td>
+        <td>{{ brand.internal_id }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<!-- Форма для додавання нового бренду -->
+<h2>Add a New Brand</h2>
+<form method="post" class="brand-form">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <label for="{{ form.logo.id }}">{{ form.logo.label }}</label>
+        {{ form.logo(class="form-control") }} <!-- Додано клас для стилізації -->
+    </div>
+    <div class="form-group">
+        <label for="{{ form.name.id }}">{{ form.name.label }}</label>
+        {{ form.name(class="form-control") }} <!-- Додано клас для стилізації -->
+    </div>
+    <div class="form-group">
+        <label for="{{ form.description.id }}">{{ form.description.label }}</label>
+        {{ form.description(class="form-control") }} <!-- Додано клас для стилізації -->
+    </div>
+    <div class="form-group">
+        <label for="{{ form.internal_id.id }}">{{ form.internal_id.label }}</label>
+        {{ form.internal_id(class="form-control") }} <!-- Додано клас для стилізації -->
+    </div>
+    <button type="submit" class="btn">Add Brand</button>
+</form>
+{% endblock %}

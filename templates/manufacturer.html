@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Manufacturers</h1>
+
+<!-- Кнопка для переходу до сторінки брендів -->
+<div class="button-container">
+  <a href="{{ url_for('admin_client.admin_brands') }}" class="btn">View Brands</a>
+</div>
+
+<!-- Таблиця для відображення всіх виробників -->
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Country</th>
+    <th>Certificates</th>
+    <th>Internal ID</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for manufacturer in manufacturers %}
+  <tr>
+    <td>{{ manufacturer.name }}</td>
+    <td>{{ manufacturer.description }}</td>
+    <td>{{ manufacturer.country }}</td>
+    <td>{{ manufacturer.certificates }}</td>
+    <td>{{ manufacturer.internal_id }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<!-- Форма для додавання нового виробника -->
+<h2>Add a New Manufacturer</h2>
+<form method="post" class="manufacturer-form">
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    <label for="{{ form.name.id }}">{{ form.name.label }}</label>
+    {{ form.name(class="form-control") }} <!-- Додано клас для стилізації -->
+  </div>
+  <div class="form-group">
+    <label for="{{ form.description.id }}">{{ form.description.label }}</label>
+    {{ form.description(class="form-control") }} <!-- Додано клас для стилізації -->
+  </div>
+  <div class="form-group">
+    <label for="{{ form.country.id }}">{{ form.country.label }}</label>
+    {{ form.country(class="form-control") }} <!-- Додано клас для стилізації -->
+  </div>
+  <div class="form-group">
+    <label for="{{ form.certificates.id }}">{{ form.certificates.label }}</label>
+    {{ form.certificates(class="form-control") }} <!-- Додано клас для стилізації -->
+  </div>
+  <div class="form-group">
+    <label for="{{ form.internal_id.id }}">{{ form.internal_id.label }}</label>
+    {{ form.internal_id(class="form-control") }} <!-- Додано клас для стилізації -->
+  </div>
+  <button type="submit" class="btn">Add Manufacturer</button>
+</form>
+
+{% endblock %}
